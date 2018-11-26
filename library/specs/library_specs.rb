@@ -62,12 +62,14 @@ end
     books_output = Library.new(@books)
     result = books_output.get_book_by_title("1984")
     assert_equal(@expected_book, result)
+    # Assumed this was expecting a hash in return?
   end
 
   def test_return_rental_details__brave__new__world
     books_output = Library.new(@books)
     result = books_output.return_rental_details("brave_new_world")
     assert_equal(@expected_details, result)
+    # Assumed this was expecting a hash in return?
   end
 
   def test_add_new_book
