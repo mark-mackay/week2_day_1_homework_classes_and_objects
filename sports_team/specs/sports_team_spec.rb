@@ -55,11 +55,22 @@ def test_find_player__Fred_Flintstone__False
   assert_equal(result, false)
 end
 
+def test_update_points__win
+  team = SportsTeam.new('CodeClan Utd',['Mark', 'Lionel Messi'],'Michael')
+  result = team.update_points('win')
+  assert_equal(3, result)
+end
 
+def test_update_points__lose
+  team = SportsTeam.new('CodeClan Utd',['Mark', 'Lionel Messi'],'Michael')
+  result = team.update_points('lose')
+  assert_equal(0, result)
+end
 
-
-
-
-
+def test_update_points__draw
+  team = SportsTeam.new('CodeClan Utd',['Mark', 'Lionel Messi'],'Michael')
+  result = team.update_points('draw')
+  assert_equal(1, result)
+end
 
 end
